@@ -1,0 +1,85 @@
+.dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px 5px;
+    text-align: left;
+    font-family: "Font Awesome 5 Brands", serif;
+}
+
+.shorcut {
+    display: flex;
+    flex-direction: column;
+    width: 8vw;
+    margin: 5vh 3vw;
+    text-decoration: none;
+    align-items: center;
+    position: relative;
+}
+
+.shorcut:before {
+    content: attr(data-icon);
+    font-size: 8vw;
+    padding-bottom: 1vh;
+}
+
+.shorcut:after {
+    content: attr(data-counter);
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #fff;
+    border-radius: 50%;
+    width: 2vw;
+    height: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1vw;
+}
+
+.shorcut[data-counter]:after{
+    background-color: darkorange;
+}
+
+.inverse {
+    color: #959ba5;
+}
+
+.shorcut-text {
+    display: flex;
+    text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+    .shorcut {
+        width: 10vw;
+        margin: 5vh 6vw;
+    }
+
+    .shorcut:before {
+        font-size: 12vw;
+    }
+
+    .shorcut:after {
+        width: 3vw;
+        height: 3vw;
+        font-size: 2vw;
+    }
+}
+
+@media screen and (max-width: 420px){
+    .shorcut {
+        width: 20vw;
+        margin: 5vh 12vw;
+    }
+
+    .shorcut:before {
+        font-size: 20vw;
+    }
+
+    .shorcut:after {
+        width: 5vw;
+        height: 5vw;
+        font-size: 3vw;
+    }
+}
